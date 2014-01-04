@@ -205,6 +205,14 @@ function optionsframework_options() {
 		'std' => 'Default Value',
 		'type' => 'textarea');
 
+	$options[] = array(
+		'name' =>  __('Pricing Section Image', 'options_check'),
+		'desc' => __('Pricing Section Image', 'options_check'),
+		'id' => 'pricing_section_image',
+		'std' => $background_defaults,
+		'type' => 'background' );
+
+
 
 	$options[] = array(
 		'name' => __('PRICING TABLE', 'options_check'),

@@ -30,6 +30,16 @@ wp_head();
             </div>
         </div>
         <div class="lnd-section section-banner">
+            <div class="section-banner-image-container">
+            <?php $background = of_get_option('section_one_image');
+                if ($background) {
+                    if ($background['image']) {
+                        echo '<img src="'.$background['image'].'">';
+                    }
+                }
+            ?>
+            </div>
+
             <div class="title1">AFFORDABLLE & CUSTOM</div>
             <div class="title2">TANK TREADS</div>
             <div class="title3">FOR CREATORS, MAKERS, AND HOBBYISTS</div>
@@ -46,11 +56,23 @@ wp_head();
                 <?php echo of_get_option('section_two_sub', 'section two sub'); ?>
             </div>
             <div class="main-image-holder">
-                <?php echo of_get_option('section_two_image', 'section two image'); ?>
+                <?php $background = of_get_option('section_two_image');
+                    if ($background) {
+                        if ($background['image']) {
+                            echo '<img src="'.$background['image'].'">';
+                        }
+                    }
+                ?>
             </div>
             <div class="spec-section">
                 <div class="spec-image-holder">
-                    <?php echo of_get_option('specification_one_image', 'specification one image'); ?>
+                    <?php $background = of_get_option('specification_one_image');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="spec-text">
                     <?php echo of_get_option('specification_one_desc', 'specification one description'); ?>
@@ -58,7 +80,13 @@ wp_head();
             </div>
             <div class="spec-section">
                 <div class="spec-image-holder">
-                    <?php echo of_get_option('specification_two_image', 'specification two image'); ?>
+                    <?php $background = of_get_option('specification_two_image');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="spec-text">
                     <?php echo of_get_option('specification_two_desc', 'specification two description'); ?>
@@ -66,7 +94,13 @@ wp_head();
             </div>
             <div class="spec-section">
                 <div class="spec-image-holder">
-                    <?php echo of_get_option('specification_three_image', 'specification three image'); ?>
+                    <?php $background = of_get_option('specification_three_image');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="spec-text">
                     <?php echo of_get_option('specification_three_desc', 'specification three description'); ?>
@@ -74,7 +108,13 @@ wp_head();
             </div>
             <div class="spec-section">
                 <div class="spec-image-holder">
-                    <?php echo of_get_option('specification_four_image', 'specification four image'); ?>
+                    <?php $background = of_get_option('specification_four_image');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="spec-text">
                     <?php echo of_get_option('specification_four_desc', 'specification four description'); ?>
@@ -89,7 +129,15 @@ wp_head();
         </div>
         <div class="lnd-section section-pricing">
             <div class="title">Start Creating Today</div>
-            <div class="image-holder"></div>
+            <div class="image-holder">
+                    <?php $background = of_get_option('pricing_section_image');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
+            </div>
             <div class="pricing-table">
                 <div class="pricing-table-header">
                     <div class="pricing-table-header-item">BASIC</div>
