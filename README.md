@@ -1,4 +1,0 @@
-walkerbot
-=========
-
-Walkerbot website
