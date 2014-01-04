@@ -104,6 +104,24 @@ function optionsframework_options() {
 		'name' => __('BASIC SETTINGS', 'options_check'),
 		'type' => 'heading');
 
+
+	// LOGO WITH TEXT
+	$options[] = array(
+		'name' =>  __('Logo Image With Text', 'options_check'),
+		'desc' => __('logo Image with text', 'options_check'),
+		'id' => 'logo',
+		'std' => $background_defaults,
+		'type' => 'background' );
+
+	// LOGO WITH TEXT
+	$options[] = array(
+		'name' =>  __('Logo Image Without Text', 'options_check'),
+		'desc' => __('logo Image without text', 'options_check'),
+		'id' => 'logo_symbol',
+		'std' => $background_defaults,
+		'type' => 'background' );
+
+
 	// MAIN BACKGROUND IMAGE
 	$options[] = array(
 		'name' =>  __('Background Image', 'options_check'),

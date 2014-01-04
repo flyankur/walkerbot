@@ -20,7 +20,15 @@ wp_head();
         <div class="lnd-header">
             <div class="lnd-header-inner">
                 <div class="lnd-header-logo"></div>
-                <div class="lnd-header-title">walkerbot</div>
+                <div class="lnd-header-title">
+                    <?php $background = of_get_option('logo');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
+                </div>
                 <div class="lnd-header-menu">
                     <div class="lnd-menu-item">order</div>
                     <div class="lnd-menu-item">specs</div>
@@ -185,7 +193,20 @@ wp_head();
                 <div class="order-button">ORDER NOW</div>
             </div>
         </div>
-        <div class="lnd-footer"></div>
+        <div class="lnd-footer">
+            <div class="lnd-footer-logo-container">
+                    <?php $background = of_get_option('logo_symbol');
+                        if ($background) {
+                            if ($background['image']) {
+                                echo '<img src="'.$background['image'].'">';
+                            }
+                        }
+                    ?>
+            </div>
+            <div class="lnd-footer-text">
+                All WALKERBOT tank treads are manufactured and produced in Washington, DC, USA.
+            </div>
+        </div>
     </div>
 
     <!-- SCRIPTS -->
