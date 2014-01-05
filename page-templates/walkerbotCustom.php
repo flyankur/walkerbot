@@ -48,7 +48,7 @@ wp_head();
             ?>
             </div>
 
-            <div class="title1">AFFORDABLLE & CUSTOM</div>
+            <div class="title1">AFFORDABLE & CUSTOM</div>
             <div class="title2">TANK TREADS</div>
             <div class="title3">FOR CREATORS, MAKERS, AND HOBBYISTS</div>
             <div class="order-button">ORDER NOW</div>
@@ -193,7 +193,7 @@ wp_head();
                 <div class="order-button">ORDER NOW</div>
             </div>
         </div>
-        <div class="lnd-footer">
+        <div class="lnd-section lnd-footer">
             <div class="lnd-footer-logo-container">
                     <?php $background = of_get_option('logo_symbol');
                         if ($background) {

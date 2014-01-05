@@ -56,8 +56,6 @@ html {
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 2 */
-  margin: 0 !important;
-  margin-top: 0 !important;
 }
 /**
  * Remove default margin.
@@ -587,6 +585,24 @@ table {
   font-family: "walkerbot";
   src: url('fonts/BebasNeue.otf');
 }
+@font-face {
+  font-family: "walkerbot-400";
+  src: url('fonts/Geogtq-Md.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "walkerbot-700";
+  src: url('fonts/Geogtq-Bd.otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: "walkerbot-100";
+  src: url('fonts/Geogtq-Ul.otf');
+  font-weight: 100;
+}
+html {
+  margin-top: 0 !important;
+}
 .lnd-container {
   position: relative;
   overflow: hidden;
@@ -623,6 +639,7 @@ table {
   width: 50%;
   color: white;
   text-align: right;
+  font-family: 'walkerbot-400', sans-serif;
 }
 .lnd-container .lnd-header .lnd-header-inner .lnd-header-menu .lnd-menu-item {
   display: inline-block;
@@ -640,25 +657,22 @@ table {
 }
 .lnd-container .lnd-section.section-banner {
   font-family: 'walkerbot', sans-serif;
-  background: url('../images/tank_image.png');
   padding: 40px 0;
-  width: 100%;
-  position: relative;
 }
-
-.section-banner-image-container {
+.lnd-container .lnd-section.section-banner .section-banner-image-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   z-index: -10;
+  display: block;
+  overflow: hidden;
 }
-
-.section-banner-image-container img {
-  display:inline;
+.lnd-container .lnd-section.section-banner .section-banner-image-container img {
   width: 100%;
+  max-width: none;
 }
-
 .lnd-container .lnd-section.section-banner .title1 {
   width: 70%;
   float: none;
@@ -707,19 +721,8 @@ table {
   overflow: hidden;
   color: white;
   line-height: 1.7em;
-}
-.lnd-container .lnd-section.section-about .title {
-  font-size: 3em;
-  font-weight: 700;
-  position: relative;
-  overflow: hidden;
-  line-height: 1.5em;
-}
-.lnd-container .lnd-section.section-about .section-about-text {
-  padding: 20px 0;
+  font-family: 'walkerbot-100', sans-serif;
   font-size: 1.5em;
-  font-weight: 400;
-  position: relative;
 }
 .lnd-container .lnd-section.section-specs {
   overflow: hidden;
@@ -728,21 +731,26 @@ table {
   width: 90%;
 }
 .lnd-container .lnd-section.section-specs .title {
-  font-size: 2.5em;
+  font-size: 3em;
   line-height: 1.5em;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-family: 'walkerbot-700', sans-serif;
 }
 .lnd-container .lnd-section.section-specs .sub {
-  font-size: 1.5em;
+  font-size: 2em;
   line-height: 1.5em;
+  font-family: 'walkerbot-100', sans-serif;
 }
 .lnd-container .lnd-section.section-specs .main-image-holder {
   margin: 40px 0;
   position: relative;
   width: 100%;
-  background: #e6e6e6;
-  height: 400px;
+  text-align: center;
+}
+.lnd-container .lnd-section.section-specs .main-image-holder img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline;
 }
 .lnd-container .lnd-section.section-specs .spec-section {
   overflow: hidden;
@@ -752,13 +760,19 @@ table {
 .lnd-container .lnd-section.section-specs .spec-section .spec-image-holder {
   width: 40%;
   float: left;
-  height: 200px;
-  background: #e6e6e6;
   margin-right: 10%;
+  text-align: left;
+}
+.lnd-container .lnd-section.section-specs .spec-section .spec-image-holder img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  display: inline;
 }
 .lnd-container .lnd-section.section-specs .spec-section .spec-text {
   font-size: 1.5em;
   line-height: 1.7em;
+  font-family: 'walkerbot-400', sans-serif;
 }
 .lnd-container .lnd-section.section-specs .spec-action-container {
   float: right;
@@ -766,20 +780,20 @@ table {
   position: relative;
   margin: 50px 0;
   font-size: 1.5em;
-  font-weight: 100;
   color: #4d4d4d;
   cursor: pointer;
+  font-family: 'walkerbot-100', sans-serif;
 }
 .lnd-container .lnd-section.section-pricing {
-  background: #333333;
+  background: #191919;
   overflow: hidden;
   padding: 40px 5%;
   width: 90%;
 }
 .lnd-container .lnd-section.section-pricing .title {
-  font-size: 2.5em;
+  font-size: 3em;
   padding: 20px 0;
-  font-weight: 400;
+  font-family: 'walkerbot-700', sans-serif;
   color: white;
   position: relative;
 }
@@ -788,7 +802,6 @@ table {
   margin: 40px auto;
   overflow: hidden;
   background: #e6e6e6;
-  height: 400px;
   border-radius: 2px;
   position: relative;
 }
@@ -809,12 +822,12 @@ table {
   width: 20%;
   margin-right: 8%;
   margin-left: 5%;
-  text-align: left;
-  font-size: 2.5em;
+  text-align: center;
+  font-size: 3em;
   color: white;
   line-height: 1.5em;
   font-weight: 700;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'walkerbot', sans-serif;
 }
 .lnd-container .lnd-section.section-pricing .pricing-table .pricing-table-label {
   padding: 20px 0;
@@ -827,11 +840,11 @@ table {
   margin-right: 8%;
   margin-left: 5%;
   text-align: left;
-  font-size: 5em;
+  font-size: 8em;
   color: white;
   line-height: 1em;
   font-weight: 700;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'walkerbot', sans-serif;
 }
 .lnd-container .lnd-section.section-pricing .pricing-table .pricing-table-desc {
   padding: 0px 0;
@@ -857,6 +870,7 @@ table {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   position: relative;
+  font-family: 'walkerbot-100', sans-serif;
 }
 .lnd-container .lnd-section.section-pricing .action-button {
   overflow: hidden;
@@ -874,4 +888,26 @@ table {
   text-align: center;
   padding: 5px 2.5%;
   border-radius: 6px;
+}
+.lnd-container .lnd-section.lnd-footer {
+  overflow: hidden;
+  position: relative;
+  background: #191919;
+}
+.lnd-container .lnd-section.lnd-footer .lnd-footer-logo-container {
+  margin: 40px auto;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.lnd-container .lnd-section.lnd-footer .lnd-footer-logo-container img {
+  display: inline;
+}
+.lnd-container .lnd-section.lnd-footer .lnd-footer-text {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'walkerbot-100', sans-serif;
+  color: white;
+  padding: 20px 0;
+  position: relative;
 }
