@@ -649,7 +649,6 @@ html {
   margin: 10px 0;
 }
 .lnd-container .lnd-section {
-  overflow: hidden;
   float: left;
   position: relative;
   width: 96%;
@@ -716,24 +715,49 @@ html {
 .lnd-container .lnd-section.section-about {
   width: 90%;
   position: relative;
-  padding: 50px 5%;
+  padding: 0 5%;
   background: #d9372b;
-  overflow: hidden;
+}
+.lnd-container .lnd-section.section-about .arrow {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #d9372b;
+  left: 47.5%;
+  margin-top: -50px;
+  position: relative;
+}
+.lnd-container .lnd-section.section-about .section-about-text {
+  padding: 100px 0;
   color: white;
   line-height: 1.7em;
   font-family: 'walkerbot-100', sans-serif;
   font-size: 1.5em;
+  position: relative;
+  overflow: hidden;
 }
 .lnd-container .lnd-section.section-specs {
-  overflow: hidden;
-  padding: 40px 5%;
+  padding: 0 5% 100px 5%;
   position: relative;
   width: 90%;
+  background: white;
+}
+.lnd-container .lnd-section.section-specs .arrow {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #ffffff;
+  left: 47.5%;
+  margin-top: -50px;
+  position: relative;
 }
 .lnd-container .lnd-section.section-specs .title {
   font-size: 3em;
   line-height: 1.5em;
   margin-bottom: 10px;
+  margin-top: 50px;
   font-family: 'walkerbot-700', sans-serif;
 }
 .lnd-container .lnd-section.section-specs .sub {
@@ -749,7 +773,6 @@ html {
 }
 .lnd-container .lnd-section.section-specs .main-image-holder img {
   max-width: 100%;
-  max-height: 100%;
   display: inline;
 }
 .lnd-container .lnd-section.section-specs .spec-section {
@@ -778,7 +801,7 @@ html {
   float: right;
   overflow: hidden;
   position: relative;
-  margin: 50px 0;
+  margin: 50px auto;
   font-size: 1.5em;
   color: #4d4d4d;
   cursor: pointer;
@@ -786,9 +809,18 @@ html {
 }
 .lnd-container .lnd-section.section-pricing {
   background: #191919;
-  overflow: hidden;
-  padding: 40px 5%;
+  padding: 0 5%;
   width: 90%;
+}
+.lnd-container .lnd-section.section-pricing .arrow {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #191919;
+  left: 47.5%;
+  margin-top: -50px;
+  position: relative;
 }
 .lnd-container .lnd-section.section-pricing .title {
   font-size: 3em;

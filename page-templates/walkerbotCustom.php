@@ -39,13 +39,13 @@ wp_head();
         </div>
         <div class="lnd-section section-banner">
             <div class="section-banner-image-container">
-            <?php $background = of_get_option('section_one_image');
-                if ($background) {
-                    if ($background['image']) {
-                        echo '<img src="'.$background['image'].'">';
+                <?php $background = of_get_option('section_one_image');
+                    if ($background) {
+                        if ($background['image']) {
+                            echo '<img src="'.$background['image'].'">';
+                        }
                     }
-                }
-            ?>
+                ?>
             </div>
 
             <div class="title1">AFFORDABLE & CUSTOM</div>
@@ -54,9 +54,13 @@ wp_head();
             <div class="order-button">ORDER NOW</div>
         </div>
         <div class="lnd-section section-about">
-            <?php echo of_get_option('section_one_desc', 'description for section one is going to come here'); ?>
+            <div class="arrow"></div>
+            <div class="section-about-text">
+                <?php echo of_get_option('section_one_desc', 'description for section one is going to come here'); ?>
+            </div>
         </div>
         <div class="lnd-section section-specs">
+            <div class="arrow"></div>
             <div class="title">
                 <?php echo of_get_option('section_two_title', 'section two title'); ?>
             </div>
@@ -136,6 +140,7 @@ wp_head();
             </div>
         </div>
         <div class="lnd-section section-pricing">
+            <div class="arrow"></div>
             <div class="title">Start Creating Today</div>
             <div class="image-holder">
                     <?php $background = of_get_option('pricing_section_image');
